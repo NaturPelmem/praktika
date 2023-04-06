@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'Ubuntu300';
+    src: url('../fonts/ubuntu-v20-latin_cyrillic-300.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu500';
+    src: url('../fonts/ubuntu-v20-latin_cyrillic-500.woff2') format('woff2');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Ubuntu700';
+    src: url('../fonts/ubuntu-v20-latin_cyrillic-700.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+  --blue: #00A0E3;
+  --black: #000000;
+  --gray: #B2B3B3;
+  --green: #B0CB1F;
+}
+.wrapper {
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+.logo {
+    width: 300px;
+    margin: 10px;
+}
+.h1 {
+    text-align: center;
+    margin: 40px;
+    color: var(--blue);
+    font-family: 'Ubuntu700', sans-serif;
+}
+.center {
+    text-align: center;
+}
+a {
+    text-decoration: none;
+}
+.btn {
+    color: var(--black);
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 2px solid var(--green);
+    background-color: inherit;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .2s ease-out;
+    font-family: 'Ubuntu500', sans-serif;
+}
+.btn:hover {
+    color: white;
+    background-color: var(--green);
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+form input {
+    width: 60%;
+    height: 40%;
+    font-size: 16px;
+    padding: 10px 20px ;
+    border: 2px solid var(--gray);
+    border-radius: 20px;
+    transition: all .3s ease-out;
+    font-family: 'Ubuntu300', sans-serif;
+}
+form input:focus {
+    border: 2px solid var(--black);
+    border-radius: 15px;
+}

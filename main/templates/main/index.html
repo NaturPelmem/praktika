@@ -1,0 +1,48 @@
+{% load static %}
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Главная страница</title>
+    <link rel="stylesheet" href="{% static 'main/styles/style.css' %}">
+    <link rel="shortcut icon" href="{% static 'main/images/logo.ico' %}">
+</head>
+<body>
+<div class="wrapper">
+    <header class="center">
+        <a href="{% url 'home' %}"><img class="logo" src="{% static 'main/images/logopraktika.svg' %}" alt=""></a>
+    </header>
+    <main>
+        <h1 class="h1">Форма регистрации</h1>
+        <div class="register__main">
+        <div class="register__content-top">
+{#            #}
+        </div>
+        <div class="register__content">
+            <div class="register__content-wrapper">
+                <div class="main">
+                    <div class="signup signup-enable">
+                        <form method="post" class="signup-form">
+                            {% csrf_token %}
+                            {% for f in form %}
+                                {{ f }}
+                                <div class="form-error">{{ f.errors }}</div>
+                            {% endfor %}
+                            <button class="btn">Зарегистрироваться</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{#    #}
+    <div class="center"><a class="btn" href="{% url 'admin:index' %}">Авторизация</a></div>
+    </main>
+<footer>
+</footer>
+</div>
+<script src="{% static 'main/scripts/script.js' %}"></script>
+</body>
+</html>
